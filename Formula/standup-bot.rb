@@ -5,23 +5,23 @@
 class StandupBot < Formula
   desc "CLI tool for managing daily standup updates via GitHub"
   homepage "https://github.com/livelabs-ventures/go-bot"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   depends_on "gh" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.1.1/go-bot_Darwin_x86_64.tar.gz"
-      sha256 "ccda82864fd3c753940cceeb6bc6bceb86a2e512747971d2aa466063c3742974"
+      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.2.0/go-bot_Darwin_x86_64.tar.gz"
+      sha256 "87ee5979af7540c6d48ddff3b6bdd190786c6cb64ed820225c0cc366c225f97a"
 
       def install
         bin.install "standup-bot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.1.1/go-bot_Darwin_arm64.tar.gz"
-      sha256 "abcf3fe30c436184dbeb39aeb2d6ba70ab5ee59e0502afc89890fb0473d5a4ad"
+      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.2.0/go-bot_Darwin_arm64.tar.gz"
+      sha256 "16f8086d301cbf295bfde6f1cb1d9d86d0509e69a19b8b46caa19228d360d36f"
 
       def install
         bin.install "standup-bot"
@@ -31,15 +31,15 @@ class StandupBot < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.1.1/go-bot_Linux_x86_64.tar.gz"
-      sha256 "80cb90ad7a07e63087c0739ca03a84662b277f0cbd5c35b6b0c15665ed586a8f"
+      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.2.0/go-bot_Linux_x86_64.tar.gz"
+      sha256 "cd1206e7ea51898caceeb43b3a89f922f318462ad0e4bdb807c3bfb25a124306"
       def install
         bin.install "standup-bot"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.1.1/go-bot_Linux_arm64.tar.gz"
-      sha256 "a5dac08a615ffe58f113a8ca295a57bfc9d63e40881d912381b09742f5933772"
+      url "https://github.com/livelabs-ventures/go-bot/releases/download/v0.2.0/go-bot_Linux_arm64.tar.gz"
+      sha256 "6e0abe75b6b1ba54ed64b718d62ebc425b4384498bba67706184364307dade2f"
       def install
         bin.install "standup-bot"
       end
